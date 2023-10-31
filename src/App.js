@@ -8,6 +8,7 @@ function App() {
   // 두 수가 다르면
   // 다시 던져보세요
 
+  // 2번째 방법
   if (num1 === num2) {
     message = <h1>당첨</h1>;
   } else {
@@ -17,6 +18,7 @@ function App() {
     <div>
       <h1>{num1}</h1>
       <h1>{num2}</h1>
+      {/* 첫번째 방법 */}
       <h1>{num1 == num2 ? "당첨" : "다시 던져보세요"}</h1>
 
       <hr />
