@@ -3,7 +3,7 @@ function App() {
     color: "blue",
     backgroundColor: "gold", // lowerCamelCase
     fontSize: "70px",
-    textAlign: "center",
+    // textAlign: "center",
   }; // js object
 
   return (
