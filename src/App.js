@@ -1,12 +1,21 @@
 function App() {
-  const name = "흥민";
+  const myStyle = {
+    color: "blue",
+    backgroundColor: "gold", // lowerCamelCase
+    fontSize: "70px",
+    textAlign: "center",
+  }; // js object
+
   return (
     <>
-      <h1>이름은 {name}</h1>
-      <h1>이름은 {"강인"}</h1>
-
-      <div className={"error"}>Lorem ipsum dolor.</div>
-      <div className="error">Lorem ipsum dolor.</div>
+      {/* style 속성은 객체로 주어야 함 */}
+      <div style={myStyle}>Lorem ipsum dolor.</div>
+      <hr />
+      <div
+        style={{ color: "red", backgroundColor: "yellow", fontSize: "30px" }}
+      >
+        Lorem ipsum dolor.
+      </div>
     </>
   );
 }
