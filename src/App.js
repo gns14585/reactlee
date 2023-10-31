@@ -10,12 +10,12 @@ function App() {
 
 function MyComponent1() {
   return (
-    <div style={{width: "100%"}}>
+    <div style={{ width: "100%" }}>
       <img
-        style={{width: "100%"}}
-                     src="https://i.imgur.com/SuL4x4v.jpeg"
-
-        alt="경복궁"/>
+        style={{ width: "100%" }}
+        src="https://i.imgur.com/SuL4x4v.jpeg"
+        alt="경복궁"
+      />
     </div>
   );
 }
