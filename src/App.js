@@ -1,10 +1,14 @@
 function App() {
+  // JSX에서 태그 사용 시 꼭 종료태그를 작성해야함
+  // 빈 요소이면 시작태그에서 종료
   return (
-    <div>
-      <h1>hello react</h1>
-        <h2>hi react</h2>
-        <MyComp></MyComp>
-    </div>
+  <div>
+    <h1>hello react</h1>
+      <h2>hi react</h2>
+      <p>Lorem ipsum dolor.
+        <br /> Lorem ipsum dolor.</p>
+      <MyComp />
+  </div>
   );
 }
 
