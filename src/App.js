@@ -32,7 +32,7 @@ function MyComponent1() {
 function MyComponent2() {
   return (
       <div>
-        <p>Lorem ipsum dolor.</p>
+        <p>lorem3</p>
         <ul>
           <li>lorem</li>
           <li>ipsum</li>
