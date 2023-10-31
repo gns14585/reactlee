@@ -24,13 +24,14 @@ function MyComp() {
 
     // jsx에서 주석 사용법
     // {/*  */}
-    return (
-        <>
-            {/* fragment는 <></> */}
-            <h1>HI COMPONENT</h1>
-            <h2>hello</h2>
-        </>
-    )
+  return (
+    <>
+      {/* fragment는 <></> */}
+      <h1>HI COMPONENT</h1>
+      <h2>hello</h2>
+
+    </>
+  )
 }
 
 export default App;
