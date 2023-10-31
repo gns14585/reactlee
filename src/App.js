@@ -15,6 +15,8 @@ function App() {
         <label htmlFor="ageInput"></label>
         <input type="text" id="ageInput" />
       </div>
+
+      <div className={}>Lorem ipsum dolor.</div>
     </>
   );
 }
