@@ -9,7 +9,7 @@ function App() {
 function MyText(props) {
   return (
     <div style={props.style}>
-      <p>{props.value}</p>
+      <p>{props.value} </p>
     </div>
   )
 }
