@@ -16,7 +16,7 @@ function App() {
 function MyHeader(props) {
   return (
     <div style={{color: props.color, backgroundColor: props.bg}}>
-      <h1 title={props.title}>{props.text}</h1>
+      <h1>{props.text}</h1>
     </div>
   )
 }
