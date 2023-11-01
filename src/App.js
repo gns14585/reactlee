@@ -1,23 +1,16 @@
-// export된 컴포넌트(변수, 함수, 객체) 를 import 해서 사용
-
-import {
-  MyBox,
-  MyContainer,
-  MyElem,
-  name,
-  address,
-  person,
-} from "./component/MyBox";
+import age, { city } from "./component/MyElem";
+import MyBox, { country, person } from "./component/MyBox";
 
 function App() {
-  console.log("name : ", name);
-  console.log("address : ", address);
-  console.log("person : ", person);
   return (
     <>
+      <h1>{city}</h1>
+      <h1>{age}</h1>
       <MyBox />
-      <MyElem />
-      <MyContainer />
+      <h1>
+        {person.age}, {person.name}
+      </h1>
+      <h1>{country}</h1>
     </>
   );
 }
