@@ -1,107 +1,20 @@
-import {
-  SimpleGrid,
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  Box,
-} from "@chakra-ui/react";
+import { Center, Circle, Square } from "@chakra-ui/react";
+import { ChatIcon, PhoneIcon } from "@chakra-ui/icons";
 
 function App() {
   return (
     <>
-      <SimpleGrid gap={5} columns={1}>
-        <Box>
-          <Table>
-            <Thead>
-              <Tr>
-                <Th>Lorem.</Th>
-                <Th>Voluptates?</Th>
-                <Th>Natus!</Th>
-                <Th>Ipsam?</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Accusamus?</Td>
-                <Td>Doloremque?</Td>
-                <Td>Vero.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Ratione?</Td>
-                <Td>Minima?</Td>
-                <Td>Modi?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Magni.</Td>
-                <Td>Eum?</Td>
-                <Td>Cum!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Molestiae.</Td>
-                <Td>Voluptatibus?</Td>
-                <Td>Aliquid!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Natus!</Td>
-                <Td>Ut!</Td>
-                <Td>Facere.</Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </Box>
-        <Box>
-          <Table variant="striped" colorScheme="red">
-            <Thead>
-              <Tr>
-                <Th>Lorem.</Th>
-                <Th>Repellat?</Th>
-                <Th>Incidunt.</Th>
-                <Th>Labore!</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Aspernatur!</Td>
-                <Td>Repudiandae.</Td>
-                <Td>Distinctio.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Facilis.</Td>
-                <Td>Natus!</Td>
-                <Td>Aliquid?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Architecto.</Td>
-                <Td>Rerum.</Td>
-                <Td>Eligendi?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Ipsam!</Td>
-                <Td>Alias.</Td>
-                <Td>Ducimus?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Possimus?</Td>
-                <Td>Consequuntur.</Td>
-                <Td>Esse?</Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </Box>
-      </SimpleGrid>
+      <Center bg={"red"} h={"200px"}>
+        <Square bg={"blue"} w={"100px"} h={"100px"}>
+          <ChatIcon />
+        </Square>
+      </Center>
+
+      <Center bg={"red.200"} h={"200px"}>
+        <Circle bg={"blue.200"} w={"100px"} h={"100px"}>
+          <PhoneIcon />
+        </Circle>
+      </Center>
     </>
   );
 }
