@@ -8,16 +8,16 @@ function MyButton({ executeClick, children }) {
 // 첫번째 버튼은 클릭하면 콘솔에 "hello"
 // 두번째 버튼은 클릭하면 콘솔에 "greeting"
 function App() {
-  function executeClick() {
+  function hello() {
     console.log("hello");
   }
-  function children() {
+  function greeting() {
     console.log("greeting");
   }
   return (
     <>
-      <MyButton>버튼</MyButton>
-      <MyButton>버튼</MyButton>
+      <MyButton executeClick={hello}>hello</MyButton>
+      <MyButton executeClick={greeting}>greeting</MyButton>
     </>
   );
 }
