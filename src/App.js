@@ -6,9 +6,11 @@ function App() {
   const [items, setItems] = useState([]);
 
   function handleButtonClick() {
-    const newItems = [...items];
-    newItems.push(text);
-    setItems(newItems);
+    // const newItems = [...items];
+    // newItems.push(text);
+    // setItems(newItems);
+
+    setItems([...items, text]);
   }
 
   function handleRemoveButtonClick(index) {
