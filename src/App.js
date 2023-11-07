@@ -5,16 +5,16 @@ function ChildComp({ onClick }) {
   return <Button onClick={onClick}>클릭</Button>;
 }
 
-function SomeComp({ onClick }) {
-  return <ChildComp onClick={onClick} />;
+function SomeComp({ value }) {
+  return <ChildComp onClick={value} />;
 }
 
 function OtherChildComp({ message }) {
   return <Text>{message}</Text>;
 }
 
-function OtherComp({ message }) {
-  return <OtherChildComp message={message} />;
+function OtherComp({ text }) {
+  return <OtherChildComp message={text} />;
 }
 
 function App(props) {
@@ -22,8 +22,8 @@ function App(props) {
 
   return (
     <div>
-      <SomeComp onClick={() => setMessage("다른 메세지")} />
-      <OtherComp message={message} />
+      <SomeComp value={() => setMessage("다른 메세지")} />
+      <OtherComp text={message} />
     </div>
   );
 }
