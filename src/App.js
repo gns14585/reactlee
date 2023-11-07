@@ -2,26 +2,23 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function App(props) {
-  const [customer, setCustomer] = useState({});
+  const [member, setMember] = useState({});
 
-  // useEffect로
-  // get요청 /api/main1/sub2
-  // 받은 값으로 message state 업데이트
   useEffect(() => {
     axios
-      .get("/api/main1/sub3")
+      .get("/api/main1/sub4")
       .then((response) => response.data)
-      .then((data) => setCustomer(data));
+      .then((data) => setMember(data));
   }, []);
-
   return (
     <div>
-      <h1>{customer.id}</h1>
-      <h1>{customer.name}</h1>
-      <h1>{customer.contactName}</h1>
-      <h1>{customer.address}</h1>
-      <h1>{customer.city}</h1>
-      <h1>{customer.postalCode}</h1>
+      <h1>{member.id}</h1>
+      <h1>{member.name}</h1>
+      <h1>{member.concatName}</h1>
+      <h1>{member.address}</h1>
+      <h1>{member.city}</h1>
+      <h1>{member.postalCode}</h1>
+      <h1>{member.country}</h1>
     </div>
   );
 }
