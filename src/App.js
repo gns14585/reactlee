@@ -28,6 +28,12 @@ function App(props) {
     setItems(newItem);
   }
 
+  function handleButtonRemoveClick(index) {
+    const removeItem = [...items];
+    removeItem.splice(index, 1);
+    setItems(removeItem);
+  }
+
   return (
     <>
       <div>
@@ -41,7 +47,12 @@ function App(props) {
       <Box>
         <UnorderedList>
           {items.map((item, index) => (
-            <ListItem key={index}>{item}</ListItem>
+            <ListItem key={index}>
+              {item}
+              <Button onClick={() => handleButtonRemoveClick(index)}>
+                지우기
+              </Button>
+            </ListItem>
           ))}
         </UnorderedList>
       </Box>
