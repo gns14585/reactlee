@@ -1,9 +1,16 @@
 import React, { createContext, useContext, useState } from "react";
-import { Button, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Input,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 
 function CComp() {
-  const text = useContext(TextContext);
-  return <Text>받은 메세지 : {text}</Text>;
+  const message = useContext(MessageContext);
+  return <Text>{message}</Text>;
 }
 
 function BComp() {
@@ -15,17 +22,37 @@ function AComp() {
 }
 
 function App(props) {
-  const [text, setText] = useState("");
+  const [message, setMessage] = useState("");
+  const [items, setItems] = useState([]);
+
+  function handleButtonClick() {
+    const nextItem = [...items];
+    nextItem.push(message);
+    setItems(nextItem);
+  }
+
   return (
-    <div>
-      <Button onClick={() => setText("변경")}>변경</Button>
-      <TextContext.Provider value={text}>
-        <AComp />
-      </TextContext.Provider>
-    </div>
+    <>
+      <Box>
+        <Input onChange={(e) => setMessage(e.target.value)} />
+        <MessageContext.Provider value={message}>
+          <AComp />
+        </MessageContext.Provider>
+        <Button onClick={handleButtonClick}>추가</Button>
+      </Box>
+
+      {/* 리스트 추가 */}
+      <Box>
+        <UnorderedList>
+          {items.map((item, index) => (
+            <ListItem key={index}>{item}</ListItem>
+          ))}
+        </UnorderedList>
+      </Box>
+    </>
   );
 }
 
-const TextContext = createContext(null);
+const MessageContext = createContext(null);
 
 export default App;
