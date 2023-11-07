@@ -13,12 +13,11 @@ function App(props) {
 
   function handleDoneButton(id) {
     updateItems((draft) => {
-      const itemIndex = draft.findIndex((item) => item.id === id);
-      if (itemIndex != -1) {
-        draft[itemIndex].done = true;
-      }
+      const target = draft.find((elem) => elem.id === id);
+      target.done = true;
     });
   }
+
   return (
     <div>
       <Button onClick={() => handleButtonClick("자바공부")}>자바공부</Button>
