@@ -35,8 +35,8 @@ function App(props) {
         <option value="10">10</option>
       </Select>
       <Box>
-        {isLoading && <Spinner />} {/* 로딩중일때 */}
-        {isLoading || (            {/* 로딩중이 아닐때 */}
+        {isLoading && <Spinner />}
+        {isLoading || (
           <>
             {customer === null ? (
               <Text>조회한 고객이 없습니다. 다른 번호를 선택해주세요.</Text>
